@@ -1,12 +1,9 @@
-import { join } from 'path'
-import React from 'react'
+import React from 'react';
 
-var classCode; 
+// let classCode;
 
-class JoinClass extends React.Component 
-{
-    render = (): React.ReactNode =>
-    (
+class JoinClass extends React.Component {
+    render = (): React.ReactNode => (
         <div className="tw-text-center">
             <form>
                 <input type="text">
@@ -18,7 +15,7 @@ class JoinClass extends React.Component
                 </input>
             </form>
         </div>
-    )
+    );
 }
 
 export default JoinClass;
