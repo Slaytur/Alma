@@ -2,8 +2,6 @@ import React from 'react';
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
-
 import '../assets/scss/pages/home.scss';
 
 declare const API_URL: string;
