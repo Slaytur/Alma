@@ -2,7 +2,7 @@ import React from "react";
 
 class Lecture extends React.Component {
     render = (): React.ReactNode => (
-        <section className=" tw-font-poppins">
+        <section className=" tw-font-poppins tw-hidden">
             <img src="./../assets/img/leftarrow.png" alt="leftarrow" className="tw-z-50 tw-absolute tw-left-4 tw-bg-cyan-500 tw-w-[84px] tw-h-[106px]" ></img>
             <img src="./../assets/img/leftarrow.png" alt="rightarrow" className=" tw-mirror tw-z-50 tw-absolute tw-right-4 tw-bg-cyan-500 tw-w-[84px] tw-h-[106px]" ></img>
             <div className="tw-opacity-70 tw-backdrop-blur-xl  tw-h-screen tw-w-screen tw-inset-0 tw-z-[40] tw-blur-md tw-absolute tw-l-0 tw-b-2 tw-t-3 tw-r-2 " />
