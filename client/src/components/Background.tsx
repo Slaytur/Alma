@@ -1,8 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-class Background extends React.Component
-{
+class Background extends React.Component {
     // render = () => (
-        
+
     // )
 }

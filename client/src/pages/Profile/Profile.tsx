@@ -2,15 +2,14 @@ import React from 'react';
 import Content from '../../components/Content';
 import Sidebar from '../../components/Sidebar';
 
-class Profile extends React.Component
-{
+class Profile extends React.Component {
     render = (): React.ReactNode =>
-    (
+        (
 
-        <div>
+            <div>
             hello world
-        </div>
-    )
+            </div>
+        );
 }
 
 export default Profile;
