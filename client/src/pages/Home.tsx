@@ -34,9 +34,9 @@ class Home extends React.Component<Record<string, never>, { isLoggedIn: boolean 
     );
 
     componentDidMount = async (): Promise<void> => {
-        await axios.get(`${API_URL}/auth/authenticated`).then(res => {
-            const data: { isLoggedIn: boolean, username?: string } = res.data;
-            if (data.isLoggedIn) window.location.href = `${window.location.protocol}//${window.location.host}/dashboard`;
+        await axios.get(`${API_URL}/auth/authenticated`, { withCredentials: true }).then(res => {
+            const data: { authenticated: boolean, username?: string } = res.data;
+            if (data.authenticated) window.location.href = `${window.location.protocol}//${window.location.host}/dashboard`;
         });
     };
 }
