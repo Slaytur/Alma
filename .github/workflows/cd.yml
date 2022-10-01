@@ -8,8 +8,8 @@ permissions:
   contents: write
 
 jobs:
-  nodejs:
-    name: Node.js
+  client:
+    name: Client
     runs-on: ubuntu-latest
     concurrency: cd-${{ github.ref }}
 
@@ -29,12 +29,14 @@ jobs:
           cache: pnpm
 
       - name: Install Packages
+        working-directory: ./client
         run: pnpm install
 
       - name: Build
+        working-directory: ./client
         run: pnpm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build
+          folder: client/build
