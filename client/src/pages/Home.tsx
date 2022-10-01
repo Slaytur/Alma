@@ -26,8 +26,8 @@ class Home extends React.Component<Record<string, never>, { isLoggedIn: boolean 
             <br />
             <br />
 
-            <a href={`https://discord.com/api/oauth2/authorize?client_id=1025798600053248090&redirect_uri=${API_URL}/auth/discord&response_type=code&scope=identify%20email`} className="btn btn-lg btn-primary btn-play-now">
-                <span>Sign In</span>
+            <a href={`https://discord.com/api/oauth2/authorize?client_id=1025798600053248090&redirect_uri=${API_URL}/auth/discord&response_type=code&scope=identify%20email`} className="btn btn-lg btn-primary btn-sign-in">
+                <span className="me-1">Sign In</span>
                 <FontAwesomeIcon icon={faSignInAlt} />
             </a>
         </main>

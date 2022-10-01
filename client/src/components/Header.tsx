@@ -37,16 +37,16 @@ class Header extends React.Component<Record<string, never>, { isLoggedIn: boolea
                             </li>
                             <li className="nav-link disabled"></li>
                         </ul>
-                        <a href="/join-class" className="dropdown-item profile-settings-opt"> 
+                        <a href="/join-class" className="dropdown-item profile-settings-opt">
                             <i className="icofont icofont-plugin"></i>
-                                Join Class
-                            </a>
+                            Join Class
+                        </a>
 
                         {/* <form action="" className="tw-flex" role="search">
                             <input type="search" className="form-control me-2" placeholder="Search" aria-label="Search" />
                             <button type="submit" className="btn btn-outline-success">Search</button>
                         </form> */}
-                        
+
                         <ul className="navbar-nav ms-auto mb-1 mb-lg-0">
                             <li className={`nav-item dropdown nav-profile-menu${!this.state.isLoggedIn ? ` d-none` : ``}`}>
                                 <a href="#" className="nav-link btn" id="profile-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
