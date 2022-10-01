@@ -2,13 +2,11 @@ import React from 'react';
 
 class Header extends React.Component {
     render = (): React.ReactNode => (
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="">Item 1</a></li>
-                    <li><a href="">Item 2</a></li>
-                    <li><a href="">Item 3</a></li>
-                </ul>
+        <header >
+            <nav className="tw-flex tw-h-16 tw-bg-secondary tw-w-full ">
+                <div>
+                    <h2>Hi</h2>
+                </div>
             </nav>
         </header>
     );
