@@ -7,7 +7,7 @@ class Profile extends React.Component {
         (
 
             <div>
-            hello world
+                
             </div>
         );
 }

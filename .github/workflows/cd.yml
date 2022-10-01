@@ -36,6 +36,12 @@ jobs:
         run: pnpm run build
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
-          folder: client/build
+          username: '${{ secrets.SFTP_USERNAME }}'
+          server: '${{ secrets.SFTP_SERVER }}'
+          port: '${{ secrets.SFTP_PORT }}'
+          ssh_private_key: ${{ secrets.SFTP_PRIVKEY }} 
+          local_path: './client/build/*'
+          remote_path: '/var/www/sloodle.alru.xyz'
+          args: '-o ConnectTimeout=5'
