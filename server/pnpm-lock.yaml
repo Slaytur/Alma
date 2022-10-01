@@ -24,8 +24,8 @@ specifiers:
   mongodb: ^4.10.0
   mongoose: ^6.6.3
   passport: ^0.6.0
-  passport-discord: ^0.1.4
   passport-google: ^0.3.0
+  passport-google-oauth2: ^0.2.0
   passport-oauth2: ^1.6.1
   socket.io: ^4.5.2
   socket.io-msgpack-parser: ^3.0.1
@@ -42,8 +42,8 @@ dependencies:
   mongodb: 4.10.0
   mongoose: 6.6.3
   passport: 0.6.0
-  passport-discord: 0.1.4
   passport-google: 0.3.0
+  passport-google-oauth2: 0.2.0
   passport-oauth2: 1.6.1
   socket.io: 4.5.2
   socket.io-msgpack-parser: 3.0.1
@@ -2007,8 +2007,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /passport-discord/0.1.4:
-    resolution: {integrity: sha512-VJWPYqSOmh7SaCLw/C+k1ZqCzJnn2frrmQRx1YrcPJ3MQ+Oa31XclbbmqFICSvl8xv3Fqd6YWQ4H4p1MpIN9rA==}
+  /passport-google-oauth2/0.2.0:
+    resolution: {integrity: sha512-62EdPtbfVdc55nIXi0p1WOa/fFMM8v/M8uQGnbcXA4OexZWCnfsEi3wo2buag+Is5oqpuHzOtI64JpHk0Xi5RQ==}
     dependencies:
       passport-oauth2: 1.6.1
     dev: false
