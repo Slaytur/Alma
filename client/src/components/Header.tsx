@@ -11,7 +11,7 @@ class Header extends React.Component {
         <header>
             <nav className="navbar navbar-expand-sm bg-light">
                 <div className="container-fluid">
-                    <a href="/"><Logo/></a>
+                    <a href="/"><Logo /></a>
                     <a href="/" className="navbar-brand ps-2 fs-2 fw-semibold">Sloodle</a>
                     <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
