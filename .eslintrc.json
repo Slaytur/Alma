@@ -19,7 +19,9 @@
         "project": "./tsconfig.json"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "react",
+        "react-hooks"
     ],
     "rules": {
         "@typescript-eslint/indent": ["error", 4, { "SwitchCase": 1 }],
