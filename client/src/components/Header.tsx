@@ -25,7 +25,7 @@ class Header extends React.Component<Record<string, never>, HeaderState> {
 
     render = (): React.ReactNode => (
         <header>
-            <nav className="navbar navbar-expand-sm  tw-bg-gradient-to-b tw-from-[rgba(160,160,160,0.5)] tw-via-[rgba(160,160,160,0.5)] tw-to-[rgba(195,195,195,0.3)]">
+            <nav className="navbar navbar-expand-sm  tw-bg-gradient-to-b tw-from-[rgba(160,160,160,0.3)] tw-via-[rgba(160,160,160,0.3)] tw-to-[rgba(195,195,195,0.25)]">
                 <div className="container-fluid">
                     <a href="/"><Logo /></a>
                     {/* <a href="/" className="navbar-brand ps-2 fs-2 fw-semibold"></a> */}
