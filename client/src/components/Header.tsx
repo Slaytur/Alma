@@ -9,15 +9,15 @@ declare const API_URL: string;
 class Header extends React.Component {
     render = (): React.ReactNode => (
         <header>
-            <nav className="navbar navbar-expand-lg bg-light">
+            <nav className="navbar navbar-expand-sm bg-light">
                 <div className="container-fluid">
-                    <a href="/"> <Logo /> </a>
-                    <a href="/" className="navbar-brand">Sloodle</a>
+                    <a href="/"><Logo/></a>
+                    <a href="/" className="navbar-brand ps-2 fs-2 fw-semibold">Sloodle</a>
                     <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav ms-5 ">
                             <li className="nav-item"><a href="#" className="nav-link active" aria-current="page">Home</a></li>
                             <li className="nav-item"><a href="#" className="nav-link" aria-current="page">Link</a></li>
                             <li className="nav-item dropdown">
@@ -37,7 +37,7 @@ class Header extends React.Component {
                             <button type="submit" className="btn btn-outline-success">Search</button>
                         </form> */}
 
-                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav ms-auto mb-1 mb-lg-0">
                             {/* <li className="nav-item">
                                 <a href="/support" className={`nav-link ${window.location.pathname === `/support` ? `active disabled` : ``}`}>Support</a>
                             </li> */}
