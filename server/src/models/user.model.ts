@@ -8,6 +8,10 @@ interface UserDoc extends Mongoose.Document {
     username: string
     email: string
     avatar?: string
+
+    settings: {
+        darkMode: boolean
+    }
 }
 
 const UserSchema = new Mongoose.Schema({
@@ -16,7 +20,11 @@ const UserSchema = new Mongoose.Schema({
 
     username: { type: String, required: true, maxlength: 32, unique: true },
     email: { type: String, required: true, unique: true },
-    avatar: { type: String, required: false }
+    avatar: { type: String, required: false },
+
+    settings: {
+        darkMode: { type: Boolean, required: false, default: false }
+    }
 });
 
 const User = Mongoose.model<UserDoc>(`User`, UserSchema);

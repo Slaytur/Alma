@@ -34,7 +34,11 @@ class Header extends React.Component<Record<string, never>, HeaderState> {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-4 ">
-                            <li className="nav-item"><a href="/" className="nav-link active" aria-current="page">Home</a></li>
+                            {this.state.account.authenticated && <li className="nav-item"><a href="/dashboard" className={`nav-link${window.location.pathname === `/dashboard` ? ` active` : ``}`} aria-current="page">Dashboard</a></li>}
+                            {this.state.account.authenticated && <li className="nav-item"><a href="/join-class" className={`nav-link${window.location.pathname === `/join-class` ? ` active` : ``}`} aria-current="page">
+                                <i className="icofont icofont-plugin tw-select-none tw-text-[#c9c9c9] tw-mix-blend-exclusion me-1"></i>
+                                Join Class
+                            </a></li>}
                             {/* <li className="nav-item"><a href="#" className="nav-link" aria-current="page">Link</a></li> */}
                             {/* <li className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
@@ -47,10 +51,6 @@ class Header extends React.Component<Record<string, never>, HeaderState> {
                             </li> */}
                             <li className="nav-link disabled"></li>
                         </ul>
-                        <a href="/join-class" className="dropdown-item profile-settings-opt tw-font-thin tw-text-[#c9c9c9] tw-mix-blend-exclusion">
-                            <i className="icofont icofont-plugin tw-select-none tw-text-[#c9c9c9] tw-mix-blend-exclusion"></i>
-                            Join Class
-                        </a>
 
                         {/* <form action="" className="tw-flex" role="search">
                             <input type="search" className="form-control me-2" placeholder="Search" aria-label="Search" />
