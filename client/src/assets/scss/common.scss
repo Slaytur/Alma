@@ -10,3 +10,8 @@
 @tailwind utilities;
 
 @import './utils/scrollbar.scss';
+
+
+.mirror {
+    transform: scaleX(-1);
+  }
