@@ -13,7 +13,7 @@ import Home from './pages/Home';
 import Dashboard from './pages/Profile/Dashboard';
 import Profile from './pages/Profile/Profile';
 import Calendar from './pages/Calendar';
-import JoinClass from './pages/_joinClass';
+import JoinClass from './pages/JoinClass';
 import Settings from './pages/Profile/Settings';
 
 import Error404 from './pages/404';
