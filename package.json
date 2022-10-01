@@ -35,7 +35,7 @@
   "bugs": {
     "url": "https://github.com/DamienVesper/Sloodle/issues"
   },
-  "homepage": "https://github.com/DamienVesper/Sloodle#readme",
+  "homepage": "https://damienvesper.github.io/sloodle",
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/eslint-parser": "^7.19.1",

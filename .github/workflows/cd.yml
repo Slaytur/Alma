@@ -1,0 +1,40 @@
+name: CD
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  nodejs:
+    name: Node.js
+    runs-on: ubuntu-latest
+    concurrency: cd-${{ github.ref }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install pNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.9.5
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: Install Packages
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
