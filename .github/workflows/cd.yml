@@ -23,6 +23,7 @@ jobs:
           version: 7.9.5
 
       - name: Install Node.js
+        working-directory: ./client
         uses: actions/setup-node@v3
         with:
           node-version: 18
