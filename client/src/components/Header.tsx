@@ -2,17 +2,16 @@ import React from 'react';
 import Logo from './Logo';
 
 // be able to query in DB !!!!
-const UserName = ()=>
-{
-    //set to username, else null (if isnotloggedin)
-}
+const UserName = () => {
+    // set to username, else null (if isnotloggedin)
+};
 
 class Header extends React.Component {
     render = (): React.ReactNode => (
         <header>
             <nav className="navbar navbar-expand-lg bg-light">
                 <div className="container-fluid">
-                    <a href="/"> <Logo /> </a>  
+                    <a href="/"> <Logo /> </a>
                     <a href="/" className="navbar-brand">Sloodle</a>
                     <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
