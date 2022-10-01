@@ -13,7 +13,7 @@ import Home from './pages/Home';
 import Dashboard from './pages/Profile/Dashboard';
 import Profile from './pages/Profile/Profile';
 import Calendar from './pages/Calendar';
-import Settings from './pages/Profile/Settings';
+import Settings from './pages/profile/Settings';
 
 import './assets/css/icofont/icofont.min.css';
 import './assets/scss/main.scss';
