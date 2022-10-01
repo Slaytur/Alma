@@ -23,9 +23,41 @@ import './assets/scss/main.scss';
 
 import 'bootstrap';
 
-class App extends React.Component {
+let AppController: {
+    updateApp: () => void
+};
+
+interface SettingsState {
+    values: {
+        darkMode: boolean
+    }
+}
+
+const SettingsController: SettingsState = {
+    values: {
+        darkMode: false
+    }
+};
+
+class App extends React.Component<Record<string, never>, { darkMode: boolean }> {
+    constructor (props: Record<string, never>) {
+        super(props);
+
+        this.state = {
+            darkMode: false
+        };
+
+        AppController = {
+            updateApp: this.updateApp
+        };
+    }
+
+    updateApp = (): void => {
+        this.setState({ darkMode: SettingsController.values.darkMode });
+    };
+
     render = (): React.ReactNode => (
-        <div id="app" className="tw-flex tw-flex-col tw-w-screen tw-h-screen">
+        <div id="app" className={`tw-flex tw-flex-col tw-w-screen tw-h-screen ${this.state.darkMode ? `tw-bg-secondary` : `tw-bg-white`}`}>
             <Header />
             <Router>
                 <Routes>
@@ -45,4 +77,8 @@ class App extends React.Component {
     );
 }
 
-export default App;
+export {
+    App,
+    AppController,
+    SettingsController
+};
