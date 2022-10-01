@@ -1,35 +1,108 @@
-import merge from 'webpack-merge';
-import common from './webpack.common';
+import * as Webpack from 'webpack';
+import WDS from 'webpack-dev-server';
 
-import CopyPlugin from 'copy-webpack-plugin';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import { WebpackManifestPlugin } from 'webpack-manifest-plugin';
+import HTMLWebpackPlugin from 'html-webpack-plugin';
+import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
 
 import * as path from 'path';
 
-const config = merge(common, {
-    mode: `production`,
+interface Configuration extends Webpack.Configuration {
+    devServer?: WDS.Configuration
+}
 
-    output: {
-        path: path.resolve(__dirname, `../build`),
-        filename: `assets/js/[name].[chunkhash].js`,
-        clean: true
+const config: Configuration = {
+    entry: {
+        app: path.resolve(__dirname, `../src/index.tsx`)
+    },
+
+    resolve: {
+        extensions: [`.js`, `.jsx`, `.ts`, `.tsx`]
+    },
+
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: [
+                    {
+                        loader: `ts-loader`,
+                        options: {
+                            transpileOnly: true,
+                            experimentalWatchApi: true
+                        }
+                    }
+                ],
+                exclude: /node_modules/
+            },
+            {
+                test: /\.m?js$/,
+                use: {
+                    loader: `babel-loader`,
+                    options: {
+                        presets: [
+                            [`@babel/preset-env`, { targets: `defaults` }]
+                        ],
+                        plugins: [`@babel/plugin-proposal-class-properties`]
+                    }
+                },
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCSSExtractPlugin.loader,
+                    `css-loader`,
+                    `postcss-loader`
+                ]
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [MiniCSSExtractPlugin.loader, `css-loader`, `postcss-loader`, `sass-loader`]
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: `asset/resource`,
+                generator: {
+                    filename: `assets/img/static/[name].[contenthash][ext]`
+                }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: `asset/resource`,
+                generator: {
+                    filename: `assets/fonts/static/[name].[contenthash][ext]`
+                }
+            }
+        ]
     },
 
     plugins: [
-        new CopyPlugin({
-            patterns: [{
-                from: path.resolve(__dirname, `../public`),
-                to: path.resolve(__dirname, `../build`),
-                globOptions: {
-                    ignore: [`**/index.html`]
-                }
-            }]
+        new Webpack.ProgressPlugin(),
+        new WebpackManifestPlugin({}),
+        new HTMLWebpackPlugin({
+            inject: true,
+            template: path.resolve(__dirname, `../public/index.html`),
+            hash: true,
+
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                keepClosingSlash: true,
+                minifyJS: true,
+                minifyCSS: true,
+                minifyURLs: true
+            }
         }),
-        new CleanWebpackPlugin({
-            cleanAfterEveryBuildPatterns: [`**/*.LICENSE.txt`],
-            protectWebpackAssets: false
+        new MiniCSSExtractPlugin({ filename: `assets/css/[name].[contenthash].css` }),
+        new Webpack.ProvidePlugin({
+            $: `jquery`
         })
     ]
-});
+};
 
 export default config;
