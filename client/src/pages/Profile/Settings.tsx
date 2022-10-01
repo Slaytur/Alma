@@ -1,6 +1,6 @@
 import React from 'react';
 
-//make dark and light switch
+// make dark and light switch
 
 class Settings extends React.Component {
     changeState = (): void => {
@@ -9,7 +9,7 @@ class Settings extends React.Component {
 
     render = (): React.ReactNode => (
         <div>
-            <button onClick={this.changeState}></button> 
+            <button onClick={this.changeState}></button>
         </div>
     );
 }
