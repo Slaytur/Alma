@@ -1,4 +1,3 @@
-// React libraries.
 import React from 'react';
 
 import {
