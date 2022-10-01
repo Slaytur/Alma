@@ -26,12 +26,12 @@ class Lecture extends React.Component<{ visibility: `COLLAPSED` | `EXPANDED` }, 
             <i className="tw-cursor-pointer icofont icofont-close tw-absolute tw-right-[11rem] tw-top-[3rem] tw-z-[60] tw-p-1" onClick={this.changeState}></i>
             <div className="tw-absolute tw-inset-x-10 md:tw-inset-x-40 tw-inset-y-10 tw-bg-primary tw-blur tw-bg-opacity-70 tw-rounded-lg tw-z-50 tw-py-8 tw-px-16"></div>
             <div className="tw-absolute tw-inset-x-10 md:tw-inset-x-40 tw-inset-y-10 tw-bg-white tw-rounded-lg tw-z-50 tw-py-8 tw-px-16 tw-overflow-scroll tw-flex tw-flex-col tw-items-center">
-                <h1 className="tw-text-[34px]">O-Chem 1.1 Intro</h1>
+                <h1 className="tw-text-[34px]">O-Chem 1.3 Lesson</h1>
                 <hr className=" tw-h-[1px] tw-w-auto tw-mx-4" />
-                <button className="tw-ml-16 tw-text-2xl">Materials</button>
-                <p>Organic compounds form the basis of all earthly life and constitute the majority of known chemicals. The bonding patterns of carbon, with its valence of four—formal single, double, and triple bonds, plus structures with delocalized electrons—make the array of organic compounds structurally diverse, and their range of applications enormous. They form the basis of, or are constituents of, many commercial products including pharmaceuticals; petrochemicals and agrichemicals, and products made from them including lubricants, solvents; plastics; fuels and explosives. The study of organic chemistry overlaps organometallic chemistry and biochemistry, but also with medicinal chemistry, polymer chemistry, and materials science.</p>
+                <button className="tw-ml-16 tw-text-2xl tw-mt-6">Materials</button>
+                <p>Organic chemistry is a branch of chemistry that studies the structure, properties and reactions of organic compounds, which contain carbon-carbon covalent bonds.[1] Study of structure determines their structural formula. Study of properties includes physical and chemical properties, and evaluation of chemical reactivity to understand their behavior. The study of organic reactions includes the chemical synthesis of natural products, drugs, and polymers, and study of individual organic molecules in the laboratory and via theoretical (in silico) study.</p>
                 <button className="tw-ml-16 tw-text-2xl tw-mt-6">Assignment</button>
-                <p className="tw-pt-4">Draw the Structure of C6H12O6</p>
+                <p className="tw-pt-4">Draw the Structure of C 2952 H 4464 N 3248 O 812 S 8 Fe 4</p>
             </div>
 
         </section>

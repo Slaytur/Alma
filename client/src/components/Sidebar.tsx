@@ -13,7 +13,7 @@ class Sidebar extends React.Component {
                     <hr className="tw-mx-4" />
 
                     <div className="tw-h-full tw-flex tw-flex-col tw-items-center">
-                        <br/><br/><br/><br/><br/>class2
+                        <br /> <div className='tw-underline'>Organic Chemistry</div><br/><br/>Linear Algebra<br/><br/><br/>
                     </div>
                 </div>
                 <div className="card tw-font-poppins tw-h-full tw-text-black tw-bg-opacity-40 tw-rounded-md tw-mt-4 tw-ml-6 tw-px-2 tw-py-3  tw-bg-primary tw-text-center mt-16">
