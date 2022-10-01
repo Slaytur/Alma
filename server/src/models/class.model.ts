@@ -3,25 +3,22 @@ import Mongoose from 'mongoose';
 interface ClassDoc extends Mongoose.Document {
     created: Date
 
-    Moduels: Array<Array<Lecture>>
-    
+    Moduels: Lecture[][]
     IP: string
 }
 
 interface Lecture {
-    Title: string;
-    Information: string;
-    Assignment: string;
-
+    Title: string
+    Information: string
+    Assignment: string
 }
 
-const ClassSchema = new Mongoose.Schema({
-    
-});
+const ClassSchema = new Mongoose.Schema({});
 
-const User = Mongoose.model<ClassDoc>(`Class`, ClassSchema);
+const Class = Mongoose.model<ClassDoc>(`Class`, ClassSchema);
 
 export {
     Lecture,
+    Class,
     ClassDoc
 };

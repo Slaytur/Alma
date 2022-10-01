@@ -7,7 +7,7 @@ interface UserDoc extends Mongoose.Document {
     email: string
     avatar?: string
 
-    enrolled: Array<string>;
+    enrolled: string[]
     IP: string
 }
 
