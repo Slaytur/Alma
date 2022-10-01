@@ -64,13 +64,13 @@ class Header extends React.Component<Record<string, never>, HeaderState> {
                                 </a>
                                 <div className="welcome-string"></div>
                                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown">
-                                    <li>
+                                    {/* <li>
                                         <a href="/profile" className="dropdown-item profile-settings-opt">
                                             <i className="icofont icofont-people tw-mr-1"></i>
                                             Profile
                                         </a>
                                     </li>
-                                    <li><hr className="dropdown-divider" /></li>
+                                    <li><hr className="dropdown-divider" /></li> */}
                                     <li>
                                         <a href="/dashboard" className="dropdown-item profile-settings-opt">
                                             <i className="icofont icofont-dashboard tw-mr-1"></i>
