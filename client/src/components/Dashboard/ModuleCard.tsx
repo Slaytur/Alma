@@ -40,7 +40,7 @@ class ModuleCard extends React.Component<Record<string, never>, Record<`state` |
             {this.state.lectureState2 === `EXPANDED` ? <Lecture2 visibility={this.state.state} /> : ``}
             {this.state.lectureState3 === `EXPANDED` ? <Lecture3 visibility={this.state.state} /> : ``}
             <div className=" tw-font-poppins tw-font-normal tw-ml-4 tw-w-[90%] md:tw-w-2/4">
-                <div onClick={this.changeState} className="card tw-cursor-pointer tw-select-none tw-mt-2 tw-bg-primary tw-bg-opacity-60 tw-text[16] md:tw-text-[26px] tw-h-16 tw-justify-left tw-items-start tw-rounded-md tw-w-full tw-flex tw-justify-start">
+                <div onClick={this.changeState} className="card tw-cursor-pointer tw-select-none tw-mt-2 tw-bg-primary tw-bg-opacity-60 tw-text[16] lg:tw-text-[26px] tw-h-16 tw-justify-left tw-items-start tw-rounded-md tw-w-full tw-flex tw-justify-start">
                     <div className='card-body tw-flex'>
                         <i className={`icofont ${this.state.state === `COLLAPSED` ? `icofont-rounded-right` : `icofont-rounded-down`}  tw-pt-[2px] tw-pr-5`}></i>
                         <h1 className="tw-w-fit">Module - 1</h1>
