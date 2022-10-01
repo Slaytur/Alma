@@ -7,7 +7,7 @@ class Header extends React.Component {
             <nav className="navbar navbar-expand-lg bg-light">
                 <div className="container-fluid">
                     <Logo />
-                    <a href="#" className="navbar-brand">Sloodle</a>
+                    <a href="/" className="navbar-brand">Sloodle</a>
                     <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -42,7 +42,7 @@ class Header extends React.Component {
                                 </a>
                                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown">
                                     <li>
-                                        <a href="#" className="dropdown-item profile-settings-opt">
+                                        <a href="/profile" className="dropdown-item profile-settings-opt">
                                             <i className="icofont icofont-people tw-mr-1"></i>
                                             Profile
                                         </a>
