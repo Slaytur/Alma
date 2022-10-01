@@ -11,7 +11,8 @@ module.exports = {
                 secondary: `#1f2022`,
                 dimsecondary: `#1f2022`,
                 dimprimary: `#57acdc`,
-                dimWhite: `rgba(255, 255, 255, 0.7)`
+                dimWhite: `rgba(255, 255, 255, 0.7)`,
+                lightgray: `rgb(220,220,220)`
             },
             fontFamily: {
                 poppins: [`Poppins`, `sans-serif`]
