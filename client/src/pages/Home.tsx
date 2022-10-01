@@ -28,6 +28,7 @@ class Home extends React.Component {
             <a href={`${API_URL}/auth/discord`} className="btn btn-lg btn-primary btn-sign-in">
                 <span>Sign In</span>
             </a>
+            <div> {/*line divider pls*/}</div>
         </main>
     );
 }
