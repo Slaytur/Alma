@@ -6,9 +6,11 @@ import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 import '../assets/scss/pages/home.scss';
 
+import axios from 'axios';
+
 declare const API_URL: string;
 
-class Home extends React.Component {
+class Home extends React.Component<Record<string, never>, { isLoggedIn: boolean }> {
     render = (): React.ReactNode => (
         <main className="tw-text-dark tw-text-center container">
             <br />
@@ -25,12 +27,19 @@ class Home extends React.Component {
             <br />
             <br />
 
-            <a href={`https://discord.com/api/oauth2/authorize?client_id=1025798600053248090&redirect_uri=${API_URL}/auth/discord&response_type=code&scope=identify%20email`} className="btn btn-lg btn-primary btn-sign-in">
+            <a href={`https://discord.com/api/oauth2/authorize?client_id=1025798600053248090&redirect_uri=${API_URL}/auth/discord&response_type=code&scope=identify%20email`} className="btn btn-lg btn-primary btn-play-now">
                 <span>Sign In</span>
                 <FontAwesomeIcon icon={faSignInAlt} />
             </a>
         </main>
     );
+
+    componentDidMount = async (): Promise<void> => {
+        await axios.get(`${API_URL}/auth/authenticated`).then(res => {
+            const data: { isLoggedIn: boolean, username?: string } = res.data;
+            if (data.isLoggedIn) window.location.href = `${window.location.protocol}//${window.location.host}/dashboard`;
+        });
+    };
 }
 
 export default Home;
