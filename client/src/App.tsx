@@ -15,6 +15,7 @@ import Profile from './pages/Profile/Profile';
 import Calendar from './pages/Calendar';
 import JoinClass from './pages/JoinClass';
 import Settings from './pages/Profile/Settings';
+import About from './pages/About';
 
 import Error404 from './pages/404';
 
@@ -65,6 +66,7 @@ class App extends React.Component<Record<string, never>, { darkMode: boolean }> 
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/calendar" element={<Calendar />} />
                     <Route path="/settings" element={<Settings />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/join-class" element={<JoinClass />} />
                     <Route path="/calendar" element={<Calendar />} />
