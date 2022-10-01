@@ -25,10 +25,49 @@ class Header extends React.Component {
                             <li className="nav-link disabled">Disabled</li>
                         </ul>
 
-                        <form action="" className="d-flex" role="search">
+                        {/* <form action="" className="tw-flex" role="search">
                             <input type="search" className="form-control me-2" placeholder="Search" aria-label="Search" />
                             <button type="submit" className="btn btn-outline-success">Search</button>
-                        </form>
+                        </form> */}
+
+                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
+                                <a href="/support" className={`nav-link ${window.location.pathname === `/support` ? `active disabled` : ``}`}>Support</a>
+                            </li>
+                            <li className="nav-item dropdown nav-profile-menu">
+                                <a href="#" className="nav-link btn" id="profile-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i className="icofont icofont-user-alt-7"></i>
+                                </a>
+                                <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown">
+                                    <li>
+                                        <a href="#" className="dropdown-item profile-settings-opt">
+                                            <i className="icofont icofont-people tw-mr-1"></i>
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li><hr className="dropdown-divider" /></li>
+                                    <li>
+                                        <a href="/dashboard" className="dropdown-item profile-settings-opt">
+                                            <i className="icofont icofont-dashboard tw-mr-1"></i>
+                                            Dashboard
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/settings" className="dropdown-item profile-settings-opt">
+                                            <i className="icofont icofont-gear tw-mr-1"></i>
+                                            Settings
+                                        </a>
+                                    </li>
+                                    <li><hr className="dropdown-divider" /></li>
+                                    <li>
+                                        <a href="/auth/logout" className="dropdown-item profile-logout-opt">
+                                            <i className="icofont icofont-logout tw-mr-1"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
