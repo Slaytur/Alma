@@ -12,7 +12,7 @@ class Header extends React.Component {
             <nav className="navbar navbar-expand-sm bg-light">
                 <div className="container-fluid">
                     <a href="/"><Logo /></a>
-                    <a href="/" className="navbar-brand ps-2 fs-2 fw-semibold">Alma</a>
+                    {/*<a href="/" className="navbar-brand ps-2 fs-2 fw-semibold"></a>*/}
                     <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -42,7 +42,7 @@ class Header extends React.Component {
                                 <a href="/support" className={`nav-link ${window.location.pathname === `/support` ? `active disabled` : ``}`}>Support</a>
                             </li> */}
                             <li className="nav-item dropdown nav-profile-menu">
-                                <a className="tw-text-xl" href="/JoinClass"> Join Class</a>
+                                <a className="tw-text-xl" href="/join-class"> Join Class</a>
                                 <a href="#" className="nav-link btn" id="profile-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i className="icofont icofont-user-alt-7"></i>
                                 </a>

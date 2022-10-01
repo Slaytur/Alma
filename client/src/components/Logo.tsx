@@ -4,7 +4,7 @@ import LogoImg from '../assets/img/favicons/favicon.png';
 
 class Logo extends React.Component {
     render = (): React.ReactNode => (
-        <img src={LogoImg} />
+        <img className="tw-w-16 tw-h-16" src={LogoImg} />
     );
 }
 
