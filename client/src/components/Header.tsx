@@ -62,7 +62,7 @@ class Header extends React.Component {
                                     </li>
                                     <li>
                                         <a href="/calendar" className="dropdown-item profile-settings-opt">
-                                            <i className="icofont icofont-calendar tw-mr-1"></i> 
+                                            <i className="icofont icofont-calendar tw-mr-1"></i>
                                             Calendar
                                         </a>
                                     </li>
