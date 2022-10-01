@@ -31,6 +31,7 @@ class App extends React.Component {
                     <Route path="/calendar" element={<Calendar />} />
                     <Route path="/settings" element={<Settings />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/calendar" element={<Calendar />} />
                 </Routes>
             </Router>
             <Footer />
