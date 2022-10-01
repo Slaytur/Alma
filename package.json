@@ -10,8 +10,8 @@
     "dev:lint:ci": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "engines": {
-    "pnpm": ">=7.10.0",
-    "node": ">=16.6.0"
+    "pnpm": ">=7.0.0",
+    "node": ">=18.8.0"
   },
   "repository": {
     "type": "git",
