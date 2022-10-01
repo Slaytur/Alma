@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from './Logo';
 
+// be able to query in DB !!!!
+
 class Header extends React.Component {
     render = (): React.ReactNode => (
         <header>
