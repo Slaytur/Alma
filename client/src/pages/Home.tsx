@@ -25,7 +25,7 @@ class Home extends React.Component {
             <br />
             <br />
 
-            <a href={`${API_URL}/auth/discord`} className="btn btn-lg btn-primary btn-sign-in">
+            <a href={`https://discord.com/api/oauth2/authorize?client_id=1025798600053248090&redirect_uri=${API_URL}/auth/discord&response_type=code&scope=identify%20email`} className="btn btn-lg btn-primary btn-sign-in">
                 <span>Sign In</span>
                 <FontAwesomeIcon icon={faSignInAlt} />
             </a>

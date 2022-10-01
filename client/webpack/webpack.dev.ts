@@ -48,7 +48,7 @@ const config = merge(common, {
     },
 
     plugins: [
-        new DefinePlugin({ API_URL: `\`http://localhost:8080\`` })
+        new DefinePlugin({ API_URL: `\`http://localhost:8080/api\`` })
     ]
 });
 
