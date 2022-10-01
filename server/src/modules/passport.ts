@@ -5,7 +5,7 @@ import passport from 'passport';
 import { Strategy as DiscordStrategy } from 'passport-discord';
 import { VerifyCallback } from 'passport-oauth2';
 
-import { User } from '../models/user.model';
+import { User } from '../models/class.model';
 
 const discordStrategy = new DiscordStrategy({
     clientID: (process.env.CLIENT_ID as string),
