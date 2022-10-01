@@ -26,6 +26,7 @@ class Home extends React.Component {
             <a href="https://discord.com/api/oauth2/authorize?client_id=1025798600053248090&redirect_uri=https%3A%2F%2Fsloodle.alru.xyz%2Fauth%2Fdiscord&response_type=code&scope=identify%20email" className="btn btn-lg btn-primary btn-sign-in">
                 <span>Sign In</span>
             </a>
+            <div> {/*line divider pls*/}</div>
         </main>
     );
 }
