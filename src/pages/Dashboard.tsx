@@ -3,7 +3,7 @@ import Sidebar from '../components/Sidebar';
 
 class Dashboard extends React.Component {
     render = (): React.ReactNode => (
-        <div className="flex tw-h-full">
+        <div className="tw-flex">
             <Sidebar />
         </div>
     );
