@@ -8,8 +8,14 @@ class Settings extends React.Component {
     };
 
     render = (): React.ReactNode => (
-        <div>
-            <button onClick={this.changeState}></button>
+        <div className="tw-text-center"> 
+            <h1 className="tw-text-xl">Settings</h1>
+
+            <div id="settingsBox" className="tw-bg-opacity-60 tw-text-[26px] tw-h-32 tw-justify-center tw-items-center tw-rounded-md tw-w-64 tw-flex">
+            <label className="switch">
+                <span id="slider round"></span>
+            </label>
+            </div>
         </div>
     );
 }
