@@ -49,7 +49,11 @@ class Header extends React.Component<Record<string, never>, HeaderState> {
                         </ul>
                         <a href="/join-class" className="dropdown-item profile-settings-opt">
                             <i className="icofont icofont-plugin"></i>
+<<<<<<< Updated upstream
                             Join Class
+=======
+                                Join Class
+>>>>>>> Stashed changes
                         </a>
 
                         {/* <form action="" className="tw-flex" role="search">

@@ -2,12 +2,12 @@ import React from "react";
 
 import LeftArrow from '../../assets/img/left-arrow.png';
 
-class Lecture extends React.Component<Record<string, never>, { state: `COLLAPSED` | `EXPANDED` }> {
-    constructor (props: Record<string, never>) {
+class Lecture extends React.Component<{ visibility: `COLLAPSED` | `EXPANDED` }, { state: `COLLAPSED` | `EXPANDED` }> {
+    constructor (props: { visibility: `COLLAPSED` | `EXPANDED` }) {
         super(props);
 
         this.state = {
-            state: `COLLAPSED`
+            state: this.props.visibility
         };
     }
 
