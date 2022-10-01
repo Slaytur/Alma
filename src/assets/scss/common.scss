@@ -10,3 +10,9 @@
 @tailwind utilities;
 
 @import './utils/scrollbar.scss';
+
+// Make the viewport take screen height and width.
+html, body, #root {
+    width: 100%;
+    min-height: 100%;
+}
