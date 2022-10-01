@@ -5,7 +5,16 @@ module.exports = {
     ],
     prefix: `tw-`,
     theme: {
-        extend: {}
+        extend: {
+            colors: {
+                primary: "#57acdc",
+                secondary: "#1f2022",
+                dimWhite: "rgba(255, 255, 255, 0.7)",
+              },
+              fontFamily: {
+                poppins: ["Poppins", "sans-serif"],
+              },
+        }
     },
     plugins: []
 };
