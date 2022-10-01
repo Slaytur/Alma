@@ -1,0 +1,72 @@
+{
+  "name": "sase-geauxhack2022",
+  "version": "0.0.0",
+  "description": "...",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config ./webpack/webpack.prod.ts",
+    "dev": "webpack serve --config ./webpack/webpack.dev.ts",
+    "dev:lint": "eslint . --fix --ext .js,.jsx.ts,.tsx",
+    "dev:lint:ci": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "engines": {
+    "pnpm": ">=7.10.0",
+    "node": ">=16.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamienVesper/SASE-GeauxHack2022.git"
+  },
+  "keywords": [
+    "react",
+    "nodejs",
+    "webpack"
+  ],
+  "author": "DamienVesper",
+  "contributors": [
+    "DamienVesper",
+    "bennlol",
+    "smite-dev",
+    "charlesbae",
+    "Iakapro",
+    "DavidShen123456789"
+  ],
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DamienVesper/SASE-GeauxHack2022/issues"
+  },
+  "homepage": "https://github.com/DamienVesper/SASE-GeauxHack2022#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@types/node": "^18.7.23",
+    "@types/webpack": "^5.28.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "autoprefixer": "^10.4.12",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.24.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss": "^8.4.17",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.0.2",
+    "ts-loader": "^9.4.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-manifest-plugin": "^5.0.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind": "^4.0.0"
+  }
+}
