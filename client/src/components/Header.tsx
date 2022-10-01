@@ -75,7 +75,7 @@ class Header extends React.Component {
                                     </li>
                                     <li><hr className="dropdown-divider" /></li>
                                     <li>
-                                        <a href="/auth/logout" className="dropdown-item profile-logout-opt">
+                                        <a href={`${API_URL}/auth/logout`} className="dropdown-item profile-logout-opt">
                                             <i className="icofont icofont-logout tw-mr-1"></i>
                                             Logout
                                         </a>
