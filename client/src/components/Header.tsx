@@ -42,7 +42,7 @@ class Header extends React.Component {
                                 <a href="/support" className={`nav-link ${window.location.pathname === `/support` ? `active disabled` : ``}`}>Support</a>
                             </li> */}
                             <li className="nav-item dropdown nav-profile-menu">
-                                <a className="tw-text-xl" href="/JoinClass"> Join Class</a>
+                                <a className="tw-text-xl" href="/join-class"> Join Class</a>
                                 <a href="#" className="nav-link btn" id="profile-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i className="icofont icofont-user-alt-7"></i>
                                 </a>

@@ -13,7 +13,7 @@ class JoinClass extends React.Component {
                 <input type="submit">
                     Join
                 </input>
-            </form>
+            </form> 
         </div>
     );
 }
