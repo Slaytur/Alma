@@ -7,7 +7,7 @@ class Lecture extends React.Component<Record<string, never>, { state: `COLLAPSED
         super(props);
 
         this.state = {
-            state: `EXPANDED`
+            state: `COLLAPSED`
         };
     }
 
