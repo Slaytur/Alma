@@ -1,6 +1,7 @@
 import merge from 'webpack-merge';
 import common from './webpack.common';
 
+import { DefinePlugin } from 'webpack';
 import CSSMinimizerPlugin from 'css-minimizer-webpack-plugin';
 
 import * as path from 'path';
@@ -44,7 +45,11 @@ const config = merge(common, {
                 }
             })
         ]
-    }
+    },
+
+    plugins: [
+        new DefinePlugin({ API_URL: `\`http://localhost:8080\`` })
+    ]
 });
 
 export default config;

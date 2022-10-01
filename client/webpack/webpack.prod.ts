@@ -1,6 +1,7 @@
 import merge from 'webpack-merge';
 import common from './webpack.common';
 
+import { DefinePlugin } from 'webpack';
 import CopyPlugin from 'copy-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
@@ -28,7 +29,8 @@ const config = merge(common, {
         new CleanWebpackPlugin({
             cleanAfterEveryBuildPatterns: [`**/*.LICENSE.txt`],
             protectWebpackAssets: false
-        })
+        }),
+        new DefinePlugin({ API_URL: `\`https://sloodle.alru.xyz/api\`` })
     ]
 });
 

@@ -1,10 +1,10 @@
+import axios from 'axios';
 import React from 'react';
 import Logo from './Logo';
 
-// be able to query in DB !!!!
-const UserName = () => {
-    // set to username, else null (if isnotloggedin)
-};
+import $ from 'jquery';
+
+declare const API_URL: string;
 
 class Header extends React.Component {
     render = (): React.ReactNode => (
@@ -87,6 +87,18 @@ class Header extends React.Component {
             </nav>
         </header>
     );
+
+    componentDidMount = async (): Promise<void> => {
+        await axios.get(`${API_URL}/auth/authenticated`).then(res => {
+            const data: { isLoggedIn: boolean, username?: string } = res.data;
+            if (data.isLoggedIn) {
+                $(`.nav-profile-menu`).removeClass(`d-none`).addClass(`d-flex`);
+                $(`.profile-settings-opt`).attr(`href`, `/${data.username ?? ``}`);
+            } else {
+                $(`.auth-btn-wrapper`).removeClass(`d-none`).addClass(`d-flex`);
+            }
+        });
+    };
 }
 
 export default Header;

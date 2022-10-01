@@ -10,6 +10,7 @@ specifiers:
   '@fortawesome/free-solid-svg-icons': ^6.2.0
   '@popperjs/core': ^2.11.6
   '@types/bootstrap': ^5.2.4
+  '@types/jquery': ^3.5.14
   '@types/node': ^18.7.23
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
@@ -33,6 +34,7 @@ specifiers:
   eslint-plugin-react: ^7.31.8
   eslint-plugin-react-hooks: ^4.6.0
   html-webpack-plugin: ^5.5.0
+  jquery: ^3.6.1
   mini-css-extract-plugin: ^2.6.1
   postcss: ^8.4.17
   postcss-import: ^15.0.0
@@ -60,6 +62,7 @@ dependencies:
   '@popperjs/core': 2.11.6
   axios: 0.26.1
   bootstrap: 5.2.1_@popperjs+core@2.11.6
+  jquery: 3.6.1
   socket.io-client: 4.5.2
   socket.io-msgpack-parser: 3.0.1
   tailwindcss: 3.1.8_m6qswdslzu5ddi7v2thd72jv24
@@ -73,6 +76,7 @@ devDependencies:
   '@fortawesome/free-regular-svg-icons': 6.2.0
   '@fortawesome/free-solid-svg-icons': 6.2.0
   '@types/bootstrap': 5.2.4
+  '@types/jquery': 3.5.14
   '@types/node': 18.7.23
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
@@ -1748,6 +1752,12 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
+  /@types/jquery/3.5.14:
+    resolution: {integrity: sha512-X1gtMRMbziVQkErhTQmSe2jFwwENA/Zr+PprCkF63vFq+Yt5PZ4AlKqgmeNlwgn7dhsXEK888eIW2520EpC+xg==}
+    dependencies:
+      '@types/sizzle': 2.3.3
+    dev: true
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
@@ -1831,6 +1841,10 @@ packages:
     dependencies:
       '@types/mime': 3.0.1
       '@types/node': 18.7.23
+    dev: true
+
+  /@types/sizzle/2.3.3:
+    resolution: {integrity: sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==}
     dev: true
 
   /@types/sockjs/0.3.33:
@@ -4409,6 +4423,10 @@ packages:
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
+
+  /jquery/3.6.1:
+    resolution: {integrity: sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw==}
+    dev: false
 
   /js-sdsl/4.1.5:
     resolution: {integrity: sha512-08bOAKweV2NUC1wqTtf3qZlnpOX/R2DU9ikpjOHs0H+ibQv3zpncVQg6um4uYtRtrwIX8M4Nh3ytK4HGlYAq7Q==}
