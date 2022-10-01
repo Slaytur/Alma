@@ -16,6 +16,8 @@ import Calendar from './pages/Calendar';
 import './assets/css/icofont/icofont.min.css';
 import './assets/scss/main.scss';
 
+import 'bootstrap';
+
 class App extends React.Component {
     render = (): React.ReactNode => (
         <div id="app" className="tw-flex tw-flex-col tw-h-full">
