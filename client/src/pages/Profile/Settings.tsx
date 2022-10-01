@@ -1,45 +1,16 @@
 import React from 'react';
 
-import { AppController } from '../../App';
+import { AppController, SettingsController } from '../../App';
 
-interface SettingsState {
-    values: {
-        darkMode: boolean
-    }
-}
-
-const SettingsController: SettingsState = {
-    values: {
-        darkMode: false
-    }
-};
-
-class Settings extends React.Component<Record<string, never>, SettingsState> {
+class Settings extends React.Component {
     darkMode: React.RefObject<HTMLInputElement>;
-
-    constructor (props: Record<string, never>) {
-        super(props);
-
-        this.state = {
-            values: {
-                darkMode: false
-            }
-        };
-
-        this.darkMode = React.createRef<HTMLInputElement>();
-    }
 
     /**
      * Fired when a checkbox state is changed.
      * @param name The name of the input.
      */
     onCheckboxUpdate = (name: string, e: React.ChangeEvent<HTMLInputElement>): void => {
-        const values = { ...this.state.values };
-        values[name] = e.target.checked;
-
-        this.setState({ values });
-
-        SettingsController.values.darkMode = !this.state.values.darkMode;
+        SettingsController.values.darkMode = !SettingsController.values.darkMode;
         AppController.updateApp();
     };
 
@@ -59,7 +30,4 @@ class Settings extends React.Component<Record<string, never>, SettingsState> {
     );
 }
 
-export {
-    Settings,
-    SettingsController
-};
+export default Settings;
