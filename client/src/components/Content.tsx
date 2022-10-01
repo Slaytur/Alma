@@ -4,7 +4,7 @@ import ModuleCard from './ModuleCard';
 class Content extends React.Component {
     render = (): React.ReactNode => (
         <section className="tw-flex tw-flex-col tw-font-poppins tw-font-black tw-m-2 tw-w-full tw-justify-center tw-items-center ">
-            <div className="tw-flex tw-bg-primary tw-text-[36px] tw-h-32 tw-justify-center tw-flex-col tw-items-center tw-w-3/4 tw-rounded-md tw-mb-6">
+            <div className="tw-flex tw-bg-primary tw-text-[36px] tw-h-32 tw-justify-center tw-flex-col tw-items-center tw-w-3/4 tw-rounded-lg tw-mb-6">
                 <h1 className="tw-w-fit">AP CS Principles</h1>
             </div>
             <ModuleCard />
