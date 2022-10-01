@@ -16,10 +16,10 @@ class Settings extends React.Component {
 
     render = (): React.ReactNode => (
         <div className="tw-text-center">
-            <h1 className="tw-text-xl tw-mt-16 tw-text-[32px] tw-mix-blend-exclusion tw-text-[#b8b8b8]">Settings</h1>
+            <h1 className="tw-text-xl tw-mt-16 tw-text-[32px] tw-mix-blend-exclusion tw-select-none tw-text-[#b8b8b8]">Settings</h1>
 
             <div className='tw-flex tw-justify-center tw-items-center '>
-                <div className="tw-mt-6 card tw-pr-4 form-check form-switch tw-w-fit tw-bg-black tw-border-white tw-mix-blend-exclusion">
+                <div className="tw-mt-6 card tw-pr-4 form-check form-switch tw-w-fit tw-select-none tw-bg-black tw-border-white tw-mix-blend-exclusion">
                     <div className="form-check form-switch ">
                         <input className="form-check-input" type="checkbox" role="switch" id="dark-mode-switch" onChange={(e => this.onCheckboxUpdate(`darkMode`, e))} />
                         <label className="form-check-label tw-text-white" htmlFor="dark-mode-switch">Dark Mode</label>
