@@ -1,5 +1,8 @@
-# Node modules
+# Dependencies
 node_modules/
 
-# React build
-dist/
+# Production build
+/build
+
+# Environment variables
+.env
