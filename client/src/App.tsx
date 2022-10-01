@@ -34,7 +34,7 @@ class App extends React.Component {
                     <Route path="/calendar" element={<Calendar />} />
                     <Route path="/settings" element={<Settings />} />
                     <Route path="/profile" element={<Profile />} />
-                    <Route path="/JoinClass" element={<JoinClass />} />
+                    <Route path="/join-class" element={<JoinClass />} />
                     <Route path="/calendar" element={<Calendar />} />
 
                     <Route path="/*" element={<Error404 />} />
