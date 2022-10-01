@@ -2,10 +2,9 @@ import React from 'react';
 import Logo from './Logo';
 
 // be able to query in DB !!!!
-const UserName = ()=>
-{
-    //set to username, else null (if isnotloggedin)
-}
+const UserName = () => {
+    // set to username, else null (if isnotloggedin)
+};
 
 class Header extends React.Component {
     render = (): React.ReactNode => (
