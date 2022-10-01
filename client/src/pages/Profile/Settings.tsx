@@ -9,12 +9,15 @@ class Settings extends React.Component {
 
     render = (): React.ReactNode => (
         <div className="tw-text-center">
-            <h1 className="tw-text-xl">Settings</h1>
+            <h1 className="tw-text-xl tw-mt-16 tw-text-[32px]">Settings</h1>
 
-            <div id="settingsBox" className="tw-bg-opacity-60 tw-text-[26px] tw-h-32 tw-justify-center tw-items-center tw-rounded-md tw-w-64 tw-flex">
-                <label className="switch">
-                    <span id="slider round"></span>
-                </label>
+            <div className='tw-flex tw-justify-center tw-items-center'>
+                <div className="tw-mt-6 card form-check form-switch tw-w-fit ">
+                    <div className=''>
+                        <label className="form-check-label" htmlFor="flexSwitchCheckChecked">Dark Mode</label>
+                        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                    </div>
+                </div>
             </div>
         </div>
     );
