@@ -8,7 +8,7 @@ class Sidebar extends React.Component {
                     <div className='tw-flex tw-items-center tw-justify-center'>
                         <h2 className="tw-text-xl tw-px-4">Classes</h2>
                         <div className='tw-w-full'></div>
-                        <i className="icofont icofont-plus tw-float-right"></i>
+                        <i className="icofont icofont-plus tw-float-right tw-cursor-pointer"></i>
                     </div>
                     <hr className="tw-mx-4" />
 
@@ -16,7 +16,7 @@ class Sidebar extends React.Component {
                         <br/><br/><br/><br/><br/>class2
                     </div>
                 </div>
-                <div className="tw-font-poppins tw-h-full tw-text-black tw-bg-opacity-40 tw-rounded-md tw-mt-4 tw-ml-6 tw-px-2 tw-py-3  tw-bg-primary tw-text-center mt-16">
+                <div className="card tw-font-poppins tw-h-full tw-text-black tw-bg-opacity-40 tw-rounded-md tw-mt-4 tw-ml-6 tw-px-2 tw-py-3  tw-bg-primary tw-text-center mt-16">
                     <h2 className="tw-text-xl tw-overflow-clip tw-text-ellipsis px-2">Assignments</h2>
                     <hr className="tw-mx-4" />
 
