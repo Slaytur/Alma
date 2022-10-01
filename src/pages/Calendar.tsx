@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Calendar = (): React.ReactNode => {
-    return (
+class Calendar extends React.Component {
+    render = (): React.ReactNode => (
         <div></div>
     );
-};
+}
 
 export default Calendar;
