@@ -25,16 +25,16 @@ class Header extends React.Component<Record<string, never>, HeaderState> {
 
     render = (): React.ReactNode => (
         <header>
-            <nav className="navbar navbar-expand-sm tw-bg-[rgba(220,220,220,0.3)]">
+            <nav className="navbar navbar-expand-sm  tw-bg-gradient-to-b tw-from-[rgba(160,160,160,0.5)] tw-via-[rgba(160,160,160,0.5)] tw-to-[rgba(195,195,195,0.3)]">
                 <div className="container-fluid">
                     <a href="/"><Logo /></a>
                     {/* <a href="/" className="navbar-brand ps-2 fs-2 fw-semibold"></a> */}
                     <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div className="collapse navbar-collapse " id="navbarSupportedContent">
                         <ul className="navbar-nav ms-4 ">
-                            {this.state.account.authenticated && <li className="nav-item"><a href="/dashboard" className={`nav-link${window.location.pathname === `/dashboard` ? ` active` : ``}`} aria-current="page">Dashboard</a></li>}
+                            {this.state.account.authenticated && <li className="nav-item "><a href="/dashboard" className={`nav-link${window.location.pathname === `/dashboard` ? ` active` : ``}`} aria-current="page">Dashboard</a></li>}
                             {this.state.account.authenticated && <li className="nav-item"><a href="/join-class" className={`nav-link${window.location.pathname === `/join-class` ? ` active` : ``}`} aria-current="page">
                                 <i className="icofont icofont-plugin tw-select-none tw-text-[#c9c9c9] tw-mix-blend-exclusion me-1"></i>
                                 Join Class
