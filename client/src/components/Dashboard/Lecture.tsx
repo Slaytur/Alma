@@ -19,8 +19,8 @@ class Lecture extends React.Component<{ visibility: `COLLAPSED` | `EXPANDED` }, 
     render = (): React.ReactNode => (
         <section className={`tw-font-poppins tw-font-normal ${this.state.state === `COLLAPSED` ? `tw-hidden` : `tw-block`}`}>
             <div className="tw-self-center tw-hidden md:tw-flex tw-absolute tw-h-full tw-top-0 tw-left-0 tw-right-0 tw-items-center">
-                <img src={LeftArrow} alt="leftarrow" className=" tw-ml-6 tw-z-50 tw-relative tw-left-4 tw-w-[42px] tw-h-[53px] " />
-                <img src={LeftArrow} alt="rightarrow" className=" tw-mr-6 mirror tw-z-50 tw-absolute tw-right-4  tw-w-[42px] tw-h-[53px] " />
+                <img onClick={this.changeState} src={LeftArrow} alt="leftarrow" className=" tw-ml-6 tw-z-50 tw-relative tw-left-4 tw-w-[42px] tw-h-[53px] " />
+                <img onClick={this.changeState} src={LeftArrow} alt="rightarrow" className=" tw-mr-6 mirror tw-z-50 tw-absolute tw-right-4  tw-w-[42px] tw-h-[53px] " />
             </div>
             <div className="tw-opacity-90 tw-backdrop-blur-xl  tw-h-screen tw-w-screen tw-inset-0 tw-z-[40] tw-blur-md tw-absolute tw-l-0 tw-b-2 tw-t-3 tw-r-2 " />
             <i className="tw-cursor-pointer icofont icofont-close tw-absolute tw-right-[11rem] tw-top-[3rem] tw-z-[60] tw-p-1" onClick={this.changeState}></i>
