@@ -1,9 +1,8 @@
 import React from 'react';
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
-
 import '../assets/scss/pages/home.scss';
 
 declare const API_URL: string;
@@ -27,7 +26,7 @@ class Home extends React.Component {
 
             <a href={`https://discord.com/api/oauth2/authorize?client_id=1025798600053248090&redirect_uri=${API_URL}/auth/discord&response_type=code&scope=identify%20email`} className="btn btn-lg btn-primary btn-sign-in">
                 <span>Sign In</span>
-                {/*<FontAwesomeIcon icon={faSignInAlt} />*/}
+                <FontAwesomeIcon icon={faSignInAlt} />
             </a>
         </main>
     );
