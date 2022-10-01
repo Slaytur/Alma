@@ -31,9 +31,9 @@ class Header extends React.Component {
                         </form> */}
 
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <a href="/support" className={`nav-link ${window.location.pathname === `/support` ? `active disabled` : ``}`}>Support</a>
-                            </li>
+                            </li> */}
                             <li className="nav-item dropdown nav-profile-menu">
                                 <a href="#" className="nav-link btn" id="profile-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i className="icofont icofont-user-alt-7"></i>
