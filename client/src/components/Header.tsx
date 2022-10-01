@@ -11,14 +11,14 @@ class Header extends React.Component {
         <header>
             <nav className="navbar navbar-expand-sm bg-light">
                 <div className="container-fluid">
-                    <a href="/"><Logo/></a>
+                    <a href="/"><Logo /></a>
                     <a href="/" className="navbar-brand ps-2 fs-2 fw-semibold">Sloodle</a>
                     <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav ms-5 ">
-                            <li className="nav-item"><a href="#" className="nav-link active" aria-current="page">Home</a></li>
+                        <ul className="navbar-nav ms-4 ">
+                            <li className="nav-item"><a href="/" className="nav-link active" aria-current="page">Home</a></li>
                             <li className="nav-item"><a href="#" className="nav-link" aria-current="page">Link</a></li>
                             <li className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
