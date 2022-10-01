@@ -5,8 +5,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 
 // Render the application to the DOM.
-const root = createRoot(document.querySelector(`#root`) as HTMLDivElement);
-root.render(
+createRoot(document.querySelector(`#root`) as HTMLDivElement).render(
     <React.StrictMode>
         <App />
     </React.StrictMode>

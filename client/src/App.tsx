@@ -15,6 +15,8 @@ import Profile from './pages/Profile/Profile';
 import Calendar from './pages/Calendar';
 import Settings from './pages/Profile/Settings';
 
+import Error404 from './pages/404';
+
 import './assets/css/icofont/icofont.min.css';
 import './assets/scss/main.scss';
 
@@ -32,6 +34,8 @@ class App extends React.Component {
                     <Route path="/settings" element={<Settings />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/calendar" element={<Calendar />} />
+
+                    <Route path="/*" element={<Error404 />} />
                 </Routes>
             </Router>
             <Footer />
