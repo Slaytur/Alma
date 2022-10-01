@@ -21,12 +21,12 @@ const discordStrategy = new DiscordStrategy({
 
             const user = new User({
                 created: new Date(),
+                id: createID(),
 
                 username: profile.username,
                 email: profile.email,
-                avatar: profile.avatar,
-
-                id: createID()
+                discordID: profile.id,
+                avatar: profile.avatar
             });
 
             void user.save((err) => {
