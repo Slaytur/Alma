@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Calendar from './pages/Calendar';
+import Settings from './pages/Settings';
 
 import './assets/css/icofont/icofont.min.css';
 import './assets/scss/main.scss';
@@ -27,6 +28,7 @@ class App extends React.Component {
                     <Route path="/" element={<Home />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/calendar" element={<Calendar />} />
+                    <Route path="/settings" element={<Settings />} />
                 </Routes>
             </Router>
             <Footer />
