@@ -14,7 +14,7 @@ class Home extends React.Component {
             <br />
             <br />
 
-            <h1 className="tw-text-6xl mt-5">Welcome to Sloodle!</h1>
+            <h1 className="tw-text-6xl mt-5">Welcome to Alma!</h1>
             <p className="desc tw-mt-4">
                 It&apos;s like Moodle, but better...
             </p>
