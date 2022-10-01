@@ -1,21 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-// let classCode;
-
-class JoinClass extends React.Component {
-    render = (): React.ReactNode => (
-        <div className="tw-text-center">
-            <form>
-                <input type="text">
-
-                </input>
-
-                <input type="submit">
-                    Join
-                </input>
-            </form> 
+class JoinClass extends React.Component 
+{
+    render = (): React.ReactNode =>
+    (
+        <div className="tw-relative top-40 tw-text-center tw-bg-green-500">
+            <form className="tw-text-center">
+                <input type="text" name="classcode"/> <br/>
+                <input type="submit"/>
+            </form>
         </div>
-    );
+    )
 }
 
 export default JoinClass;
