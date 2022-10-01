@@ -30,7 +30,7 @@ const config = merge(common, {
             cleanAfterEveryBuildPatterns: [`**/*.LICENSE.txt`],
             protectWebpackAssets: false
         }),
-        new DefinePlugin({ API_URL: `\`https://sloodle.alru.xyz/api\`` })
+        new DefinePlugin({ API_URL: `\`https://alma.alru.xyz/api\`` })
     ]
 });
 

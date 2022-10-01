@@ -1,5 +1,5 @@
 {
-  "name": "@damienvesper/sloodle-client",
+  "name": "@damienvesper/alma-client",
   "version": "0.0.0",
   "description": "...",
   "main": "index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DamienVesper/Sloodle.git"
+    "url": "git+https://github.com/DamienVesper/Alma.git"
   },
   "keywords": [
     "react",
@@ -33,9 +33,9 @@
   ],
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/DamienVesper/Sloodle/issues"
+    "url": "https://github.com/DamienVesper/Alma/issues"
   },
-  "homepage": "https://damienvesper.github.io/sloodle",
+  "homepage": "https://damienvesper.github.io/alma",
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/eslint-parser": "^7.19.1",
