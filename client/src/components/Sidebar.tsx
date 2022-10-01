@@ -2,7 +2,7 @@ import React from 'react';
 
 class Sidebar extends React.Component {
     render = (): React.ReactNode => (
-        <section className="tw-w-32">
+        <aside className="tw-w-32">
             <div className='tw-w-32 hover:tw-w-64 tw-ease-in tw-duration-150 tw-z-10'>
                 <div className="tw-font-poppins tw-h-full tw-text-black tw-bg-opacity-40 tw-rounded-md tw-mt-4 tw-ml-4 tw-px-2 tw-py-3  tw-ease-in tw-duration-150 tw-z-10 tw-bg-primary tw-text-center mt-16">
                     <h2 className="tw-text-xl">Classes</h2>
@@ -17,7 +17,7 @@ class Sidebar extends React.Component {
                     <div className="tw-h-full tw-flex tw-flex-col tw-items-center"></div>
                 </div>
             </div>
-        </section>
+        </aside>
     );
 }
 
