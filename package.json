@@ -44,6 +44,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@types/bootstrap": "^5.2.4",
     "@types/node": "^18.7.23",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
@@ -86,7 +87,11 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "axios": "^0.26.1",
+    "bootstrap": "^5.2.1",
+    "socket.io-client": "^4.5.2",
+    "socket.io-msgpack-parser": "^3.0.1",
     "tailwindcss": "^3.1.8"
   }
 }
