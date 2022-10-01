@@ -8,7 +8,7 @@ class Sidebar extends React.Component {
                     <div className='tw-flex tw-items-center tw-justify-center'>
                         <h2 className="tw-text-xl tw-px-4">Classes</h2>
                         <div className='tw-w-full'></div>
-                        <i className="icofont icofont-plus tw-float-right tw-cursor-pointer"></i>
+                        <a href='/join-class'><i className="icofont icofont-plus tw-float-right tw-cursor-pointer"></i></a>
                     </div>
                     <hr className="tw-mx-4" />
 
