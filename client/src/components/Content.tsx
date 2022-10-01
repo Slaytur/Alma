@@ -1,4 +1,5 @@
 import React from 'react';
+import ModuleCard from './ModuleCard';
 
 class Content extends React.Component {
     render = (): React.ReactNode => (
@@ -6,9 +7,7 @@ class Content extends React.Component {
             <div className="tw-flex tw-bg-primary tw-text-[26px] tw-h-16 tw-justify-center tw-flex-col tw-items-center tw-w-3/4 tw-rounded-md tw-mb-6">
                 <h1 className="tw-w-fit">AP CS Principles</h1>
             </div>
-            <div className="tw-my-2 tw-flex tw-bg-primary tw-bg-opacity-40 tw-text-[26px] tw-h-16 tw-justify-center tw-flex-col tw-items-center tw-w-2/4 tw-rounded-md">
-                <h1 className="tw-w-fit">Module - X</h1>
-            </div>
+            <ModuleCard />
         </section>
     );
 }
