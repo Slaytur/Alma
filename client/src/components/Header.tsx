@@ -1,4 +1,4 @@
-import axios, { responseEncoding } from 'axios';
+import axios from 'axios';
 import React from 'react';
 import Logo from './Logo';
 
@@ -62,7 +62,7 @@ class Header extends React.Component<Record<string, never>, HeaderState> {
                         </form> */}
 
                         <ul className="navbar-nav ms-auto mb-1 mb-lg-0">
-                            <li className={`nav-item dropdown nav-profile-menu${!this.state.authenticated ? ` d-none` : ``}`}>
+                            <li className={`nav-item dropdown nav-profile-menu${!this.state.account.authenticated ? ` d-none` : ``}`}>
                                 <a href="#" className="nav-link btn" id="profile-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i className="icofont icofont-user-alt-7"></i>
                                 </a>
