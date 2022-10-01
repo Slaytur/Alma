@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -27,7 +27,7 @@ class Home extends React.Component {
 
             <a href={`${API_URL}/auth/discord`} className="btn btn-lg btn-primary btn-sign-in">
                 <span>Sign In</span>
-                <FontAwesomeIcon icon={faSignInAlt} />
+                {/*<FontAwesomeIcon icon={faSignInAlt} />*/}
             </a>
         </main>
     );
