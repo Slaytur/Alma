@@ -47,20 +47,15 @@ class Header extends React.Component<Record<string, never>, HeaderState> {
                             </li> */}
                             <li className="nav-link disabled"></li>
                         </ul>
-                        <a href="/join-class" className="dropdown-item profile-settings-opt">
-                            <i className="icofont icofont-plugin"></i>
-<<<<<<< Updated upstream
+                        <a href="/join-class" className="dropdown-item profile-settings-opt tw-font-thin tw-text-[#c9c9c9] tw-mix-blend-exclusion">
+                            <i className="icofont icofont-plugin tw-select-none tw-text-[#c9c9c9] tw-mix-blend-exclusion"></i>
                             Join Class
-=======
-                                Join Class
->>>>>>> Stashed changes
                         </a>
 
                         {/* <form action="" className="tw-flex" role="search">
                             <input type="search" className="form-control me-2" placeholder="Search" aria-label="Search" />
                             <button type="submit" className="btn btn-outline-success">Search</button>
                         </form> */}
-
                         <ul className="navbar-nav ms-auto mb-1 mb-lg-0">
                             <li className={`nav-item dropdown nav-profile-menu${!this.state.account.authenticated ? ` d-none` : ``}`}>
                                 <a href="#" className="nav-link btn" id="profile-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
