@@ -26,13 +26,12 @@ class Settings extends React.Component<Record<string, never>, SettingsState> {
      * Fired when a checkbox state is changed.
      * @param name The name of the input.
      */
-     onCheckboxUpdate = (name: string, e: React.ChangeEvent<HTMLInputElement>): void => {
+    onCheckboxUpdate = (name: string, e: React.ChangeEvent<HTMLInputElement>): void => {
         const values = { ...this.state.values };
         values[name] = e.target.checked;
 
         this.setState({ values });
     };
-
 
     render = (): React.ReactNode => (
         <div className="tw-text-center">
