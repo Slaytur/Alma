@@ -1,12 +1,13 @@
 import React from 'react';
 import Lecture from './Lecture';
 
-class ModuleCard extends React.Component<Record<string, never>, { state: `COLLAPSED` | `EXPANDED` }> {
+class ModuleCard extends React.Component<Record<string, never>, Record<`state` | `lectureState`, `COLLAPSED` | `EXPANDED`>> {
     constructor (props: Record<string, never>) {
         super(props);
 
         this.state = {
-            state: `COLLAPSED`
+            state: `COLLAPSED`,
+            lectureState: `COLLAPSED`
         };
     }
 
@@ -15,12 +16,13 @@ class ModuleCard extends React.Component<Record<string, never>, { state: `COLLAP
     };
 
     view = (): void => {
-        // show lecture element with correct materials
+        this.setState({ lectureState: this.state.lectureState === `COLLAPSED` ? `EXPANDED` : `COLLAPSED` });
+        console.log(this.state.lectureState);
     };
 
     render = (): React.ReactNode => (
-        <section className='tw-w-full tw-h-full'>
-            <Lecture visibility={this.state.state} />
+        <section className='tw-w-full tw-h-full tw-font-normal'>
+            {this.state.lectureState === `EXPANDED` ? <Lecture visibility={this.state.state} /> : ``}
             <div className=" tw-font-poppins tw-font-normal tw-ml-4 tw-w-[90%] md:tw-w-2/4">
                 <div onClick={this.changeState} className="card tw-cursor-pointer tw-select-none tw-mt-2 tw-bg-primary tw-bg-opacity-60 tw-text-[26px] tw-h-16 tw-justify-left tw-items-start tw-rounded-md tw-w-full tw-flex tw-justify-start">
                     <div className='card-body tw-flex'>
