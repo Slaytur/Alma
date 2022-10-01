@@ -1,15 +1,25 @@
-import axios from 'axios';
+import axios, { responseEncoding } from 'axios';
 import React from 'react';
 import Logo from './Logo';
 
 declare const API_URL: string;
 
-class Header extends React.Component<Record<string, never>, { authenticated: boolean }> {
+interface HeaderState {
+    account: {
+        authenticated: boolean
+        avatar?: string
+        username?: string
+    }
+}
+
+class Header extends React.Component<Record<string, never>, HeaderState> {
     constructor (props: Record<string, never>) {
         super(props);
 
         this.state = {
-            authenticated: false
+            account: {
+                authenticated: false
+            }
         };
     }
 
@@ -97,8 +107,8 @@ class Header extends React.Component<Record<string, never>, { authenticated: boo
 
     componentDidMount = async (): Promise<void> => {
         await axios.get(`${API_URL}/auth/authenticated`, { withCredentials: true }).then(res => {
-            const data: { authenticated: boolean, username?: string } = res.data;
-            if (data.authenticated) this.setState({ authenticated: true });
+            const data: { authenticated: boolean, username?: string, avatar?: string } = res.data;
+            if (data.authenticated) this.setState({ account: { authenticated: true, username: data.username, avatar: data.avatar } });
         });
     };
 }

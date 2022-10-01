@@ -3,7 +3,6 @@ import { Snowflake } from '@boatgame-io/id-utils';
 
 interface UserDoc extends Mongoose.Document {
     created: Date
-    IP: string
     id: Snowflake
 
     username: string
@@ -13,7 +12,6 @@ interface UserDoc extends Mongoose.Document {
 
 const UserSchema = new Mongoose.Schema({
     created: { type: Date, required: true },
-    IP: { type: String, required: true },
     id: { type: String, required: true },
 
     username: { type: String, required: true, maxlength: 32, unique: true },
