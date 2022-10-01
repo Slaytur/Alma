@@ -14,7 +14,7 @@ import Dashboard from './pages/Profile/Dashboard';
 import Profile from './pages/Profile/Profile';
 import Calendar from './pages/Calendar';
 import JoinClass from './pages/JoinClass';
-import { Settings, SettingsController } from './pages/Profile/Settings';
+import Settings from './pages/Profile/Settings';
 
 import Error404 from './pages/404';
 
@@ -25,6 +25,18 @@ import 'bootstrap';
 
 let AppController: {
     updateApp: () => void
+};
+
+interface SettingsState {
+    values: {
+        darkMode: boolean
+    }
+}
+
+const SettingsController: SettingsState = {
+    values: {
+        darkMode: false
+    }
 };
 
 class App extends React.Component<Record<string, never>, { darkMode: boolean }> {
@@ -67,5 +79,6 @@ class App extends React.Component<Record<string, never>, { darkMode: boolean }> 
 
 export {
     App,
-    AppController
+    AppController,
+    SettingsController
 };
