@@ -56,14 +56,6 @@ class Header extends React.Component<Record<string, never>, HeaderState> {
                             <input type="search" className="form-control me-2" placeholder="Search" aria-label="Search" />
                             <button type="submit" className="btn btn-outline-success">Search</button>
                         </form> */}
-<<<<<<< Updated upstream
-=======
-
-                        <a href="/about" className="dropdown-item profile-settings-opt">
-                            <i className=""></i>
-                            About
-                        </a>
->>>>>>> Stashed changes
                         <ul className="navbar-nav ms-auto mb-1 mb-lg-0">
                             <li className={`nav-item dropdown nav-profile-menu${!this.state.account.authenticated ? ` d-none` : ``}`}>
                                 <a href="#" className="nav-link btn" id="profile-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
