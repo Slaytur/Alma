@@ -4,12 +4,12 @@ import Logo from './Logo';
 
 declare const API_URL: string;
 
-class Header extends React.Component<Record<string, never>, { isLoggedIn: boolean }> {
+class Header extends React.Component<Record<string, never>, { authenticated: boolean }> {
     constructor (props: Record<string, never>) {
         super(props);
 
         this.state = {
-            isLoggedIn: false
+            authenticated: false
         };
     }
 
@@ -48,7 +48,7 @@ class Header extends React.Component<Record<string, never>, { isLoggedIn: boolea
                         </form> */}
 
                         <ul className="navbar-nav ms-auto mb-1 mb-lg-0">
-                            <li className={`nav-item dropdown nav-profile-menu${!this.state.isLoggedIn ? ` d-none` : ``}`}>
+                            <li className={`nav-item dropdown nav-profile-menu${!this.state.authenticated ? ` d-none` : ``}`}>
                                 <a href="#" className="nav-link btn" id="profile-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i className="icofont icofont-user-alt-7"></i>
                                 </a>
@@ -96,9 +96,9 @@ class Header extends React.Component<Record<string, never>, { isLoggedIn: boolea
     );
 
     componentDidMount = async (): Promise<void> => {
-        await axios.get(`${API_URL}/auth/authenticated`).then(res => {
-            const data: { isLoggedIn: boolean, username?: string } = res.data;
-            if (data.isLoggedIn) this.setState({ isLoggedIn: true });
+        await axios.get(`${API_URL}/auth/authenticated`, { withCredentials: true }).then(res => {
+            const data: { authenticated: boolean, username?: string } = res.data;
+            if (data.authenticated) this.setState({ authenticated: true });
         });
     };
 }
