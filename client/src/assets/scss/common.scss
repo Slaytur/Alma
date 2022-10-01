@@ -1,17 +1,18 @@
-// Import fonts.
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-
-// Import bootstrap.
-@import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
-// Import tailwind.
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Varela+Round&display=swap';
+
+@import '../../../node_modules//bootstrap/dist/css/bootstrap.min.css';
+
 @import './utils/scrollbar.scss';
 
+body {
+    font-family: 'Varela Round', sans-serif;
+}
 
 .mirror {
     transform: scaleX(-1);
-  }
+}
