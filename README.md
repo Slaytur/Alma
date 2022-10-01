@@ -1,6 +1,6 @@
 <div align="center">
     <h1>SASE GeauxHack 2022</h1>
-    <p>A 24-hour hackathon to create a product given a specific prompt. Enjoy your stay..</p>
+    <p>A 24-hour hackathon to create a product given a specific prompt. Enjoy your stay.</p>
 </div>
 
 ## Prerequisites
