@@ -2,6 +2,10 @@ import React from 'react';
 import Logo from './Logo';
 
 // be able to query in DB !!!!
+const UserName = ()=>
+{
+    //set to username, else null (if isnotloggedin)
+}
 
 class Header extends React.Component {
     render = (): React.ReactNode => (
@@ -42,6 +46,7 @@ class Header extends React.Component {
                                 <a href="#" className="nav-link btn" id="profile-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i className="icofont icofont-user-alt-7"></i>
                                 </a>
+                                <div className="welcome-string"></div>
                                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown">
                                     <li>
                                         <a href="/profile" className="dropdown-item profile-settings-opt">
