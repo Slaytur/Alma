@@ -1,12 +1,28 @@
-import axios from 'axios';
+import axios, { responseEncoding } from 'axios';
 import React from 'react';
 import Logo from './Logo';
 
-import $ from 'jquery';
-
 declare const API_URL: string;
 
-class Header extends React.Component {
+interface HeaderState {
+    account: {
+        authenticated: boolean
+        avatar?: string
+        username?: string
+    }
+}
+
+class Header extends React.Component<Record<string, never>, HeaderState> {
+    constructor (props: Record<string, never>) {
+        super(props);
+
+        this.state = {
+            account: {
+                authenticated: false
+            }
+        };
+    }
+
     render = (): React.ReactNode => (
         <header>
             <nav className="navbar navbar-expand-sm tw-bg-[rgba(220,220,220,0.3)]">
@@ -31,22 +47,18 @@ class Header extends React.Component {
                             </li> */}
                             <li className="nav-link disabled"></li>
                         </ul>
-                        <a href="/join-class" className="dropdown-item profile-settings-opt"> 
+                        <a href="/join-class" className="dropdown-item profile-settings-opt">
                             <i className="icofont icofont-plugin"></i>
-                                Join Class
-                            </a>
+                            Join Class
+                        </a>
 
                         {/* <form action="" className="tw-flex" role="search">
                             <input type="search" className="form-control me-2" placeholder="Search" aria-label="Search" />
                             <button type="submit" className="btn btn-outline-success">Search</button>
                         </form> */}
-                        
+
                         <ul className="navbar-nav ms-auto mb-1 mb-lg-0">
-                            {/* <li className="nav-item">
-                                <a href="/support" className={`nav-link ${window.location.pathname === `/support` ? `active disabled` : ``}`}>Support</a>
-                            </li> */}
-                            <li className="nav-item dropdown nav-profile-menu">
-                                {/* <a className="tw-text-xl" href="/join-class"> Join Class</a> */}
+                            <li className={`nav-item dropdown nav-profile-menu${!this.state.authenticated ? ` d-none` : ``}`}>
                                 <a href="#" className="nav-link btn" id="profile-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i className="icofont icofont-user-alt-7"></i>
                                 </a>
@@ -94,14 +106,9 @@ class Header extends React.Component {
     );
 
     componentDidMount = async (): Promise<void> => {
-        await axios.get(`${API_URL}/auth/authenticated`).then(res => {
-            const data: { isLoggedIn: boolean, username?: string } = res.data;
-            if (data.isLoggedIn) {
-                $(`.nav-profile-menu`).removeClass(`d-none`).addClass(`d-flex`);
-                $(`.profile-settings-opt`).attr(`href`, `/${data.username ?? ``}`);
-            } else {
-                $(`.auth-btn-wrapper`).removeClass(`d-none`).addClass(`d-flex`);
-            }
+        await axios.get(`${API_URL}/auth/authenticated`, { withCredentials: true }).then(res => {
+            const data: { authenticated: boolean, username?: string, avatar?: string } = res.data;
+            if (data.authenticated) this.setState({ account: { authenticated: true, username: data.username, avatar: data.avatar } });
         });
     };
 }

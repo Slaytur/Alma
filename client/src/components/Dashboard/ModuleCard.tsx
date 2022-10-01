@@ -10,12 +10,11 @@ class ModuleCard extends React.Component<Record<string, never>, { state: `COLLAP
     }
 
     changeState = (): void => {
-        // blah blah blah set the state
         this.setState({ state: this.state.state === `COLLAPSED` ? `EXPANDED` : `COLLAPSED` });
     };
 
     view = (): void => {
-        console.log(`show the lecture element with right materials`);
+        // show lecture element with correct materials
     };
 
     opensesamea = (): void => {

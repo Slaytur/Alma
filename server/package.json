@@ -59,6 +59,7 @@
     "yargs": "^17.6.0"
   },
   "dependencies": {
+    "@boatgame-io/id-utils": "^0.0.3",
     "connect-mongo": "^4.6.0",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
@@ -70,7 +71,6 @@
     "passport-discord": "^0.1.4",
     "passport-google": "^0.3.0",
     "passport-oauth2": "^1.6.1",
-    "react-fontawesome": "^1.7.1",
     "socket.io": "^4.5.2",
     "socket.io-msgpack-parser": "^3.0.1"
   }

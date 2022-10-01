@@ -6,6 +6,7 @@ import { Strategy as DiscordStrategy } from 'passport-discord';
 import { VerifyCallback } from 'passport-oauth2';
 
 import { User } from '../models/user.model';
+import { createID } from '@boatgame-io/id-utils';
 
 const discordStrategy = new DiscordStrategy({
     clientID: (process.env.CLIENT_ID as string),
@@ -22,7 +23,10 @@ const discordStrategy = new DiscordStrategy({
                 created: new Date(),
 
                 username: profile.username,
-                email: profile.email
+                email: profile.email,
+                avatar: profile.avatar,
+
+                id: createID()
             });
 
             void user.save((err) => {
