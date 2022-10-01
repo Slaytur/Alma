@@ -25,8 +25,8 @@ class Header extends React.Component<Record<string, never>, { isLoggedIn: boolea
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-4 ">
                             <li className="nav-item"><a href="/" className="nav-link active" aria-current="page">Home</a></li>
-                            <li className="nav-item"><a href="#" className="nav-link" aria-current="page">Link</a></li>
-                            <li className="nav-item dropdown">
+                            {/* <li className="nav-item"><a href="#" className="nav-link" aria-current="page">Link</a></li> */}
+                            {/* <li className="nav-item dropdown">
                                 <a href="#" className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
                                 <ul className="dropdown-menu">
                                     <li><a href="#" className="dropdown-item">Action 1</a></li>
@@ -34,7 +34,7 @@ class Header extends React.Component<Record<string, never>, { isLoggedIn: boolea
                                     <li><hr className="dropdown-divider" /></li>
                                     <li><a href="#" className="dropdown-item">Action 3</a></li>
                                 </ul>
-                            </li>
+                            </li> */}
                             <li className="nav-link disabled"></li>
                         </ul>
                         <a href="/join-class" className="dropdown-item profile-settings-opt">
