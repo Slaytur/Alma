@@ -1,5 +1,6 @@
 <div align="center">
     <img src="./client/src/assets/img/logos/logo_readme.png" alt="Alma logo">
+    <hr />
 </div>
 
 <div align="center">
