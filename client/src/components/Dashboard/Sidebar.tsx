@@ -2,30 +2,37 @@ import React from 'react';
 
 class Sidebar extends React.Component {
     render = (): React.ReactNode => (
-        <aside className="tw-w-32 md:tw-w-64 tw-z-10 tw-ml-10px">
-            <div className='tw-w-32 md:tw-w-64 hover:tw-w-64 tw-ease-in tw-duration-150 tw-z-10'>
-                <div className=" card card-body tw-font-poppins tw-h-full tw-text-black tw-bg-opacity-40 tw-rounded-md tw-mt-2 tw-ml-6 tw-px-2 tw-py-3  tw-ease-in tw-duration-150 tw-z-10 tw-bg-primary tw-text-center mt-16">
-                    <div className='tw-flex tw-items-center tw-justify-center'>
-                        <h2 className="tw-text-md md:text-text-xl tw-px-2">Classes</h2>
-                        <div className='tw-w-2'></div>
-                        <a href='/join-class'><i className="icofont icofont-plus tw-float-right tw-cursor-pointer"></i></a>
+        <div className="tw-w-[300px]">
+            <div className="card card-body mb-3">
+                <div className="px-3 w-100">
+                    <div className="d-flex flex-column flex-shrink-0">
+                        <span className="fs-4 tw-text-center">Classes</span>
+                        <hr className="my-2" />
+                        <ul className="nav nav-pills flex-column mb-auto mt-2">
+                            <li className="nav-item"><a href="#" className="nav-link active">Organic Chemistry</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link link-dark">Linear Algebra</a></li>
+                        </ul>
                     </div>
-                    <hr className="tw-mx-4" />
 
-                    <div className="tw-h-full tw-flex tw-flex-col tw-items-center">
-                        <br /> <div className='tw-underline'>Organic Chemistry</div><br/><br/>Linear Algebra<br/><br/><br/>
-                    </div>
-                </div>
-                <div className="card tw-font-poppins tw-h-full tw-text-black tw-bg-opacity-40 tw-rounded-md tw-mt-4 tw-ml-6 tw-px-2 tw-py-3  tw-bg-primary tw-text-center mt-16 tw-justify-start">
-                    <h2 className="tw-text-xl tw-overflow-clip tw-text-ellipsis px-2">Assignments</h2>
-                    <hr className="tw-mx-4" />
-
-                    <div className="tw-h-full tw-flex tw-flex-col tw-items-center">
-                        <br/><br/><br/><br/><br/><br/><br/><br/>10/6/2022
-                    </div>
+                    <hr className="mb-2" />
+                    <a href="/join-class" className="btn btn-sm btn-secondary btn-block w-100">Join a class...</a>
                 </div>
             </div>
-        </aside>
+
+            <div className="card card-body">
+                <div className="px-3 w-100">
+                    <div className="d-flex flex-column flex-shrink-0">
+                        <span className="fs-4 tw-text-center">Assignments</span>
+                        <hr className="my-2" />
+                        <span className="tw-text-xs tw-text-center">No assignments at this time!</span>
+                        <ul className="nav nav-pills flex-column mb-auto mt-2"></ul>
+                    </div>
+
+                    {/* <hr className="mb-2" />
+                    <a href="/join-class" className="btn btn-sm btn-secondary btn-block w-100">View all assignments...</a> */}
+                </div>
+            </div>
+        </div>
     );
 }
 

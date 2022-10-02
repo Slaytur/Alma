@@ -5,9 +5,9 @@ import Sidebar from '../../components/Dashboard/Sidebar';
 class Dashboard extends React.Component {
     render = (): React.ReactNode => (
         <main className="container tw-flex tw-my-4">
-            <div className="tw-flex-col">
+            <aside className="tw-flex-col tw-mr-4">
                 <Sidebar />
-            </div>
+            </aside>
             <Content />
         </main>
     );

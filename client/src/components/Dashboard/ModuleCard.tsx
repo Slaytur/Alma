@@ -4,12 +4,14 @@ import Lecture from './Modules/Lecture';
 import Lecture2 from './Modules/Lecture2';
 import Lecture3 from './Modules/Lecture3';
 
+import '../../assets/scss/pages/Dashboard/ModuleCard.scss';
+
 class ModuleCard extends React.Component<Record<string, never>, Record<`state` | `lectureState` | `lectureState2` | `lectureState3`, `COLLAPSED` | `EXPANDED`>> {
     constructor (props: Record<string, never>) {
         super(props);
 
         this.state = {
-            state: `COLLAPSED`,
+            state: `EXPANDED`,
             lectureState: `COLLAPSED`,
             lectureState2: `COLLAPSED`,
             lectureState3: `COLLAPSED`
@@ -36,36 +38,25 @@ class ModuleCard extends React.Component<Record<string, never>, Record<`state` |
     };
 
     render = (): React.ReactNode => (
-        <section className='tw-w-full tw-h-full'>
-            {this.state.lectureState === `EXPANDED` ? <Lecture visibility={this.state.state} /> : ``}
-            {this.state.lectureState2 === `EXPANDED` ? <Lecture2 visibility={this.state.state} /> : ``}
-            {this.state.lectureState3 === `EXPANDED` ? <Lecture3 visibility={this.state.state} /> : ``}
-            <div className=" tw-font-poppins tw-font-normal tw-ml-4 tw-w-[90%] md:tw-w-2/4">
-                <div onClick={this.changeState} className="card tw-cursor-pointer tw-select-none tw-mt-2 tw-bg-primary tw-bg-opacity-60 tw-text[16] lg:tw-text-[26px] tw-h-16 tw-justify-left tw-items-start tw-rounded-md tw-w-full tw-flex tw-justify-start">
-                    <div className='card-body tw-flex'>
-                        <i className={`icofont ${this.state.state === `COLLAPSED` ? `icofont-rounded-right` : `icofont-rounded-down`}  tw-pt-[2px] tw-pr-5`}></i>
-                        <h1 className="tw-w-fit">Module - 1</h1>
+        <section className="tw-w-full tw-mt-2">
+            {this.state.lectureState === `EXPANDED` && <Lecture visibility={this.state.state} />}
+            {this.state.lectureState2 === `EXPANDED` && <Lecture2 visibility={this.state.state} />}
+            {this.state.lectureState3 === `EXPANDED` && <Lecture3 visibility={this.state.state} />}
+
+            <ul className="list-unstyled ps-0">
+                <li className="mb-1">
+                    <div className="card card-body tw-bg-primary tw-bg-opacity-40">
+                        <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#module1-collapse" aria-expanded="true" onClick={this.changeState}>Module - 1</button>
                     </div>
-                </div>
-                <div onClick={this.view} className={`tw-cursor-pointer tw-select-none card tw-justify-center tw-mb-1 tw-flex tw-bg-primary tw-bg-opacity-40 tw-text-[16px] tw-h-10 tw-mt-1 tw-justify-left tw-items-start tw-rounded-lg tw-w-5/6 ${this.state.state === `COLLAPSED` ? `tw-invisible` : ` tw-block`}`}>
-                    <div className="tw-flex tw-ml-6">
-                        <i className="icofont icofont-rounded-right tw-w-fit"></i>
-                        <h1 className="tw-w-fit">Module - 1.1</h1>
+                    <div className="collapse show" id="module1-collapse">
+                        <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" className="link-dark d-inline-flex text-decoration-none rounded card card-body p-3 mt-1 tw-bg-primary tw-bg-opacity-40" onClick={this.view}>Submodule - 1.1</a></li>
+                            <li><a href="#" className="link-dark d-inline-flex text-decoration-none rounded card card-body p-3 mt-1 tw-bg-primary tw-bg-opacity-40" onClick={this.view2}>Submodule - 1.2</a></li>
+                            <li><a href="#" className="link-dark d-inline-flex text-decoration-none rounded card card-body p-3 mt-1 tw-bg-primary tw-bg-opacity-40" onClick={this.view3}>Submodule - 1.3</a></li>
+                        </ul>
                     </div>
-                </div>
-                <div onClick={this.view2} className={`tw-cursor-pointer tw-select-none card tw-justify-center tw-mb-1 tw-flex tw-bg-primary tw-bg-opacity-40 tw-text-[16px] tw-h-10 tw-mt-1 tw-justify-left tw-items-start tw-rounded-lg tw-w-5/6 ${this.state.state === `COLLAPSED` ? `tw-invisible` : ` tw-block`}`}>
-                    <div className="tw-flex tw-ml-6">
-                        <i className="icofont icofont-rounded-right tw-w-fit"></i>
-                        <h1 className="tw-w-fit">Module - 1.2</h1>
-                    </div>
-                </div>
-                <div onClick={this.view3} className={`tw-cursor-pointer tw-select-none card tw-justify-center tw-mb-2 tw-flex tw-bg-primary tw-bg-opacity-40 tw-text-[16px] tw-h-10 tw-mt-1 tw-justify-left tw-items-start tw-rounded-lg tw-w-5/6 ${this.state.state === `COLLAPSED` ? `tw-invisible` : ` tw-block`}`}>
-                    <div className="tw-flex tw-ml-6">
-                        <i className="icofont icofont-rounded-right tw-w-fit"></i>
-                        <h1 className="tw-w-fit">Module - 1.3</h1>
-                    </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
     );
 }
