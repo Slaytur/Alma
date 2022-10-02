@@ -122,10 +122,7 @@ const config: Configuration = {
                 minifyURLs: true
             }
         }),
-        new MiniCSSExtractPlugin({ filename: `assets/css/[name].[contenthash].css` }),
-        new Webpack.ProvidePlugin({
-            $: `jquery`
-        })
+        new MiniCSSExtractPlugin({ filename: `assets/css/[name].[contenthash].css` })
     ]
 };
 

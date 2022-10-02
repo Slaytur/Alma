@@ -1,5 +1,5 @@
 import React from 'react';
-import ModuleCard from './ModuleCard';
+import ModuleCard from '../ModuleCard';
 
 class Content extends React.Component {
     render = (): React.ReactNode => (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import LeftArrow from '../../assets/img/left-arrow.png';
+import LeftArrow from '../../../assets/img/icons/left-arrow.png';
 
 class Lecture extends React.Component<{ visibility: `COLLAPSED` | `EXPANDED` }, { state: `COLLAPSED` | `EXPANDED` }> {
     constructor (props: { visibility: `COLLAPSED` | `EXPANDED` }) {

@@ -1,7 +1,8 @@
 import React from 'react';
-import Lecture from './Lecture';
-import Lecture2 from './Lecture2';
-import Lecture3 from './Lecture3';
+
+import Lecture from './Modules/Lecture';
+import Lecture2 from './Modules/Lecture2';
+import Lecture3 from './Modules/Lecture3';
 
 class ModuleCard extends React.Component<Record<string, never>, Record<`state` | `lectureState` | `lectureState2` | `lectureState3`, `COLLAPSED` | `EXPANDED`>> {
     constructor (props: Record<string, never>) {

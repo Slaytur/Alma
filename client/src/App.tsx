@@ -6,8 +6,8 @@ import {
     Route
 } from 'react-router-dom';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/templates/Header';
+import Footer from './components/templates/Footer';
 
 import Home from './pages/Home';
 import Dashboard from './pages/Profile/Dashboard';

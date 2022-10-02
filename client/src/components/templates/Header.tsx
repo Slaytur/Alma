@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-import Logo from './Logo';
+import Logo from '../Logo';
 
 declare const API_URL: string;
 

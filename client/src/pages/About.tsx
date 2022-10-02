@@ -7,7 +7,7 @@ class About extends React.Component {
             <br/>
             <ol>
                 <li>An optimized learning platform </li> <br/>
-                <li>Caterred to Students</li> <br/>
+                <li>Catered to Students</li> <br/>
                 <li>By Students</li>
             </ol>
         </div>
