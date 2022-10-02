@@ -1,5 +1,6 @@
 <div align="center">
-    <img src="./client/src/assets/img/logos/logo_readme.png" alt="Alma logo">
+    <a href="https://geaux-hack-2022.devpost.com"><img src="./client/src/assets/img/logos/logo_readme.png" alt="Alma logo"></a>
+    <h1>Alma</h1>
 </div>
 
 <div align="center">
