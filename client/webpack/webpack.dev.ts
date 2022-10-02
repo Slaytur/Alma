@@ -2,7 +2,6 @@ import merge from 'webpack-merge';
 import common from './webpack.common';
 
 import { DefinePlugin } from 'webpack';
-import CSSMinimizerPlugin from 'css-minimizer-webpack-plugin';
 
 import * as path from 'path';
 
@@ -22,29 +21,6 @@ const config = merge(common, {
         path: path.resolve(__dirname, `../build`),
         filename: `assets/js/[name].[chunkhash].js`,
         clean: true
-    },
-
-    optimization: {
-        runtimeChunk: {
-            name: `manifest`
-        },
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: `vendor`,
-                    chunks: `all`
-                }
-            }
-        },
-        minimizer: [
-            `...`,
-            new CSSMinimizerPlugin({
-                minimizerOptions: {
-                    preset: [`default`, { discardComments: { removeAll: true } }]
-                }
-            })
-        ]
     },
 
     plugins: [

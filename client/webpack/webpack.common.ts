@@ -4,6 +4,7 @@ import WDS from 'webpack-dev-server';
 import { WebpackManifestPlugin } from 'webpack-manifest-plugin';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
+import CSSMinimizerPlugin from 'css-minimizer-webpack-plugin';
 
 import * as path from 'path';
 
@@ -74,6 +75,29 @@ const config: Configuration = {
                     filename: `assets/fonts/static/[name].[contenthash][ext]`
                 }
             }
+        ]
+    },
+
+    optimization: {
+        runtimeChunk: {
+            name: `manifest`
+        },
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: `vendor`,
+                    chunks: `all`
+                }
+            }
+        },
+        minimizer: [
+            `...`,
+            new CSSMinimizerPlugin({
+                minimizerOptions: {
+                    preset: [`default`, { discardComments: { removeAll: true } }]
+                }
+            })
         ]
     },
 
